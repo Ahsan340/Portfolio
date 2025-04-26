@@ -1,0 +1,200 @@
+professional-style.css
+
+/* --- Root Variables --- */
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --accent-color: #28a745; /* Example: Success green */
+    --body-bg: #f8f9fa;
+    --text-color: #495057;
+    --heading-color: #343a40; /* Darker heading */
+    --transition-duration: 0.3s;
+    --font-primary: 'Montserrat', sans-serif;
+}
+
+body {
+    font-family: var(--font-primary);
+    color: var(--text-color);
+    background-color: var(--body-bg);
+    line-height: 1.7;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6, .font-weight-bold {
+    color: var(--heading-color);
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color var(--transition-duration) ease-in-out;
+}
+
+a:hover {
+    color: darken(var(--primary-color), 15%);
+}
+
+/* --- Navigation Bar --- */
+.navbar {
+    background-color: white !important;
+    padding: 1rem 0;
+    transition: box-shadow var(--transition-duration) ease-in-out;
+}
+
+.navbar.scrolled {
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.05);
+}
+
+.navbar-brand {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--heading-color) !important;
+    font-family: 'Montserrat', sans-serif; /* Or 'Lato', 'Inter', 'Source Sans Pro' */
+}
+
+
+
+.navbar-nav .nav-item {
+    margin-left: 1rem;
+}
+
+.navbar-nav .nav-link {
+    color: var(--heading-color) !important;
+    padding: 0.7rem 1rem;
+    transition: color var(--transition-duration) ease-in-out;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: var(--primary-color) !important;
+}
+
+/* --- Hero Section --- */
+.hero-section {
+    padding: 8rem 0;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.hero-section .lead {
+    font-size: 1.1rem;
+    color: var(--secondary-color);
+}
+
+.hero-section .btn-primary {
+    border-radius: 50px;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    box-shadow: 0 0.5rem 1rem rgba(0, 123, 255, 0.2);
+    transition: background-color var(--transition-duration) ease-in-out, transform 0.2s ease-in-out, box-shadow var(--transition-duration) ease-in-out;
+}
+
+.hero-section .btn-primary:hover {
+    background-color: darken(var(--primary-color), 10%);
+    transform: translateY(-3px);
+    box-shadow: 0 0.75rem 1.25rem rgba(0, 123, 255, 0.3);
+}
+
+/* --- About Section --- */
+#about {
+    padding: 7rem 0;
+}
+
+#about img {
+    border-radius: 0.5rem;
+    box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease-in-out;
+}
+
+#about img:hover {
+    transform: scale(1.03);
+}
+
+#about .lead {
+    color: var(--secondary-color);
+    font-size: 1.15rem;
+    line-height: 1.8;
+}
+
+#about .list-unstyled i {
+    color: var(--accent-color);
+    margin-right: 0.5rem;
+}
+
+#about .btn-outline-secondary {
+    border-radius: 50px;
+    padding: 0.8rem 1.5rem;
+    font-weight: 600;
+    box-shadow: 0 0.5rem 1rem rgba
+}
+#contact {
+    background-color: #f8f9fa; /* Light background, consistent with Bootstrap's default */
+    padding: 3rem 0; /* Reduced vertical padding for a slightly less tall section */
+}
+
+#contact h2 {
+    font-size: 2.2rem; /* Slightly larger heading */
+    font-weight: bold;
+    color: #2c3e50; /* A slightly darker heading color for better contrast */
+    margin-bottom: 2.5rem; /* Increased bottom margin for more spacing */
+    text-align: center; /* Center the heading */
+}
+
+#contact p.lead {
+    font-size: 1.1rem; /* Slightly larger lead paragraph */
+    color: #667885; /* A slightly darker muted color */
+    margin-bottom: 2rem; /* Increased bottom margin */
+    text-align: center;
+}
+
+#contact p {
+    font-size: 1rem;
+    color: #495057; /* Default text color */
+    margin-bottom: 1rem; /* Consistent bottom margin for paragraphs */
+    text-align: center;
+}
+
+#contact a {
+    color: #007bff; /* Bootstrap's primary color for links */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.2s ease-in-out; /* Smooth color transition */
+}
+
+#contact a:hover {
+    color: #0056b3; /* Darker shade of blue on hover */
+    text-decoration: underline; /* Add underline on hover for better feedback */
+}
+
+#contact i {
+    margin-right: 0.5rem; /* Spacing between icon and text */
+    color: #007bff;  /* Icon color */
+}
+
+.container {
+    max-width: 100%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 768px) {
+  .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+  }
+  #contact h2{
+    font-size: 2rem;
+  }
+  #contact p.lead{
+    font-size: 1rem;
+  }
+}   
